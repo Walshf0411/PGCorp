@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PGcorp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="PG.css">
+    <style >
+		body,
+		html
+	{
+		width: 100%;
+		height: 100%;
+		background: grey;
+	}
+	.home
+	{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.item
+	{
+		height: 500px;
+		width: 500px;
+		background: white;
+		border-radius: 15px;
+	}
+	.content
+	{
+		height: 100%;
+		padding: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+	.in
+	{
+		padding: 15px;
+	}
+	.logo
+	{
+		width: 90px;
+		height: 90px;
+		border-radius: 50%;
+		margin: 0 auto;
+		border: 3px solid black;
+		color: black;
+		margin-bottom: 20px;
+		padding: 2px;
+		line-height:90px;
+	}
+	.logo h1
+	{
+		font-weight: 700;
+		font-size: 40px;
+	}
+	input[type=text],
+	input[type=password]
+	{
+		background:0 0;
+		border: 0;
+		box-shadow: none;
+		border-bottom: 1px solid black;
+		border-radius: 0;
+
+	}
+	.lg
+	{
+		margin-bottom: 20px;
+	}
+	.input-group-addon
+	{
+		background: 0 0;
+		border: 0;
+		color:black;
+	}
+	.btn-info
+	{
+		border: 0;
+		background: #ff3366;
+		border-radius: 30px;
+
+	}
+	input[type=text],
+	input[type=password]:focus{
+		box-shadow:none !important;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="home" id="rk">
+		<div class="item">
+			<div class="content">
+				<form action="#" class="form-horizontal">
+					<div class="logo">
+					<h1>PG</h1>
+					</div>
+					<div class="input-group lg">
+					<span class="input-group-addon"><i class="fa fa-user"></i></span>
+					<input type="text" class="form-control" placeholder ="User name">
+				</div>
+					<div class="input-group lg">
+					<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+					<input type="password" class="form-control" placeholder ="Password">
+				</div>
+				<div class="form-group in">
+					<input type="submit" class="btn btn-info btn-block" value="Log in">
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
