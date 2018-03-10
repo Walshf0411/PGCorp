@@ -1,0 +1,4 @@
+<h1>{{ flat.nearest_railway_station }}</h1>
+<form method="post" action="{% url 'homepage:flat-delete' flat.id %}">{% csrf_token %}
+    <button type="submit" name="q">delete</button>
+</form>
