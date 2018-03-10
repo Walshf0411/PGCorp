@@ -1,0 +1,16 @@
+
+
+
+
+{% block content %}
+<div class='col-sm-6 col-sm-offset-3'>
+  <h1>{{ title }}</h1>
+  <hr/>
+
+<form method="post"  enctype="multipart/form-data">{% csrf_token %}
+  {{ form }}
+  <input type="submit"  class="btn-default" value="{{ title }}" />
+
+</form>
+</div>
+{% endblock content %}
