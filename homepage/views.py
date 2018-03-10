@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.views import generic
 from .models import Flat
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.core.urlresolvers import reverse_lazy
 
 
 def index(request):
@@ -24,14 +25,17 @@ class DetailView(generic.DetailView):
 
 
 class FlatCreate(CreateView):
-    model = 'Album'
+    model = 'Flat'
     fields = ['nearest_railway_station', 'number_of_members', 'preferred_guests', 'price',
               'price_negotiable', 'description']
 
 
 class FlatUpdate(UpdateView):
-    model = 'Album'
-    fields = ['nearest_railway_station', 'number_of_members', 'preferred_guests', 'price',
-              'price_negotiable', 'description']
+    model = 'Flat'
+    fields = ['nearest_railway_station', 'number_of_members', 'preferred_guests', 'price', 'price_negotiable', 'description']
 
+
+class FlatDelete(DeleteView):
+    model = 'Flat'
+    success_url = reverse_lazy('homepage:flats')
 
