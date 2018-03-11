@@ -6,6 +6,8 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
 
 
+
+
 def index(request):
     return render(request, 'homepage/indexPG.html')
 
@@ -44,5 +46,3 @@ class FlatDelete(DeleteView):
 
 def membership(request):
     return render(request, 'homepage/memberPG.html')
-
-
