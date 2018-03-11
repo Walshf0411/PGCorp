@@ -1,6 +1,8 @@
 from django.db import models
 from django.conf import settings
 from django.core.urlresolvers import reverse
+from django.db.models.signals import pre_save
+from django.utils.text import slugify
 
 
 class Flat(models.Model):
@@ -18,7 +20,19 @@ class Flat(models.Model):
     house_type = models.CharField(max_length=10, choices=HOUSE_TYPE, default='1 BHK')
 
     def get_absolute_url(self):
-        return reverse('url homepage:detail', kwargs={'pk': self.pk})
+        return reverse('homepage:detail', kwargs={'': self.pk})
 
     def __str__(self):
         return 'Nearest Rail : '+str(self.nearest_railway_station)+" id : "+str(self.pk)
+
+
+def pre_save_flat_signal_receiver(sender, instance, *args, **kwargs):
+    slug = slugify(instance.user)
+    exists = Flat.objects.filter(slug=slug).exists()
+
+    if exists:
+        slug = "%s-%s" % (slug, instance.id) #Check this line
+    instance.slug = slug
+
+
+pre_save.connect(pre_save_flat_signal_receiver, sender=Flat)

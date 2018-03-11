@@ -1,58 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="PG.css">
-    <style>
-
-    </style>
-</head>
-<body>
-
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid" >
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="indexPG.html"><img src="imgPG/logo1.png" class="img-responsive" id="icon"></a>
-
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="indexPG.html"><span class="glyphicon glyphicon-home"> Home</a></li>
-                <li><a href="#foot"><span class="glyphicon glyphicon-earphone"> Contact</span></a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-file"> Services</span></a></li>
-                <li><a href="flats.html"><span class="glyphicon glyphicon-bed"> Flats</span></a></li>
-                <li><a href="memberPG.html"><span class="glyphicon glyphicon-calendar"> Membership</span></a></li>
-            </ul>
-
-            <form class="navbar-form navbar-right" action="#">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="search-location">
-                </div>
-                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"> Search</span></button>
-            </form>
-            <form class="navbar-form navbar-right" action="loginPg.html">
-                <div class="form-group">
-                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-user"> Login</span></button>
-                </div>
-            </form>
-            <form class="navbar-form navbar-right" action="#">
-                <div class="form-group">
-                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-log-out"> Sign out</span></button>
-                </div>
-            </form>
-
-        </div>
-    </div>
-</nav>
-
+{% extends 'homepage/navbarPG.html '%}
+{% block body %}
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -60,9 +7,10 @@
         <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
 
+    <!--Carousel Starts here-->
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img src="imgPG/home_1PG.png" class="img-responsive">
+            {% load staticfiles %}<img src="{% static 'homepage/imgPG/home_1PG.png'%}" class="img-responsive">
             <div class="carousel-caption" id="capH">
                 <h1><strong>GET TO KNOW PG CORP</strong></h1>
                 <br>
@@ -70,14 +18,14 @@
             </div>
         </div> <!--end active-->
         <div class="item">
-            <img src="imgPG/kalyan1PG.png" class="img-responsive">
+            {% load staticfiles %}<img src="{% static 'homepage/imgPG/kalyan1PG.png' %}" class="img-responsive">
 
             <div class="carousel-caption" id="capK"><h2><strong><p>NOW FLATS AVAILABLE</p><p>IN KALYAN</p></strong></h2></div>
 
 
         </div>
         <div class="item">
-            <img src="imgPG/home2PG.jpg">
+            {% load staticfiles %}<img src="{% static 'homepage/imgPG/home2PG.jpg' %}">
         </div>
     </div>
     <!--start slider controls-->
@@ -92,20 +40,23 @@
 </div> <!--end slider-->
 
 
-
+<!--Second part of index starts here-->
 <div class="container text-center">
     <h2><strong>CHOOSE YOUR PICK</strong></h2>
     <div class="row">
         <div class="col-sm-4">
-            <a href="https://www.w3schools.com/html/html5_intro.asp"><img src="imgPG/rowhousePG.jpg" class="img-circle id="icon"></a>
+            <a href="https://www.w3schools.com/html/html5_intro.asp">
+                {% load staticfiles %}<img src="{% static 'homepage/imgPG/rowhousePG.jpg' %}" class="img-circle" id="icon"></a>
             <h4><strong>ROWHOUSE</strong></h4>
         </div>
         <div class="col-sm-4">
-            <a href="https://www.w3schools.com/bootstrap/default.asp"><img src="imgPG/flatmum.jpg" class="img-circle" id="icon"></a>
+            <a href="https://www.w3schools.com/bootstrap/default.asp">
+                {% load staticfiles %}<img src="{% static 'homepage/imgPG/flatmum.jpg' %}" class="img-circle" id="icon"></a>
             <h4><strong>FLATS</strong></h4>
         </div>
         <div class="col-sm-4">
-            <a href="https://www.w3schools.com/css/"><img src="imgPG/goa.jpg" class="img-circle"  id="icon"></a>
+            <a href="https://www.w3schools.com/css/">{% load staticfiles %}
+                <img src="{% static 'homepage/imgPG/goa.jpg' %}" class="img-circle"  id="icon"></a>
             <h4><strong>VILLA</strong></h4>
         </div>
     </div>
@@ -113,7 +64,7 @@
 <br>
 <br>
 <br>
-
+<!--Footer ends here-->
 <div class="footer" id="foot">
 <br>
     <div class="row">
@@ -169,3 +120,4 @@
 
 </body>
 </html>
+{% endblock %}

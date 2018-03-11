@@ -1,4 +1,19 @@
-<form class="form-group" method="post" action="">
-    {% include 'homepage/form-template.html'%}
-    <button type="submit">Submit</button>
-</form>
+{% extends 'homepage/navbarPG.html'%}
+{% block body %}
+<div class="container-fluid">
+    <div class="col-sm-12 col-md-7">
+        <div class="panel-body">
+            <form action="" class="form-horizontal" method="post" enctype="multipart/form-data">
+                {%csrf_token%}
+                {%include 'homepage/form-template.html'%}
+
+                <div class="form-control">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{%endblock%}
