@@ -3,7 +3,12 @@
 <br>
 <br>
 <style>
-
+    #flat{
+        background-color: lightblue;
+        max-width:900px;
+        border-width: 10px;
+        border-color: black;
+    }
 </style>
 {% if flats %}
 {% for flat in flats %}
@@ -26,10 +31,11 @@
                 <li><strong>Nearest station : {{flat.nearest_railway_station}}<span class="glyphicon glyphicon-train"></span></strong></li> <hr>
                <li><strong>House type : {{flat.house_type}}<span class="glyphicon glyphicon-house"></span></strong></li> <hr>
                 {% if flat.negotiable %}
-                <li><strong>Negotiable<span class="glyphicon glyphicon-ok"></span></strong></strong></li>
+                <li><strong>Negotiable<span class="glyphicon glyphicon-ok"></span></strong></strong></li><hr>
                 {% else %}
-                <li><strong>Negotiable<span class="glyphicon glyphicon-remove"></span></strong></strong></li>
+                <li><strong>Negotiable<span class="glyphicon glyphicon-remove"></span></strong></strong></li><hr>
                 {% endif %}
+                <li><button class="btn btn-primary">VIEW DETAILS</button></li>
             </ul>
         </div>
 
