@@ -10,6 +10,7 @@ from .forms import UserLoginForm, UserRegisterForm
 
 #login and registration
 
+
 def login_view(request):
     print(request.user.is_authenticated())
 
@@ -23,12 +24,7 @@ def login_view(request):
         print(request.user.is_authenticated())
         #return redirect("/")
 
-
-
-
-
-    return render(request, "form.html",{"form":form,"title":title})
-
+    return render(request, "form.html", {"form": form, "title": title})
 
 
 def register_view(request):
@@ -51,7 +47,6 @@ def register_view(request):
     return render(request, "form.html", context)
 
 
-
 def logout_view(request):
     logout(request)
-    return render(request, "form.html",{})
+    return render(request, "form.html", {})

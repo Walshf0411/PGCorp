@@ -1,0 +1,90 @@
+{% extends 'homepage/navbarPG.html '%}
+{% block body %}
+<br>
+<br>
+<style>
+
+</style>
+{% if flats %}
+{% for flat in flats %}
+<div class="container text-center"   style="border:10px solid" id="flat">
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-md-6">
+            <br>
+            <br>
+            <a >
+                {% load staticfiles %}<img src="{{flat.image.url}}" class="img-responsive"></a>
+
+        </div>
+        <div class="col-md-6">
+          <h2>Owner : {{flat.user}}</h2>
+            <ul>
+                <hr> <li><strong>Contact : <span class="glyphicon glyphicon-phone"></span></strong></li> <hr>
+                <li><strong>Nearest station : {{flat.nearest_railway_station}}<span class="glyphicon glyphicon-train"></span></strong></li> <hr>
+               <li><strong>House type : {{flat.house_type}}<span class="glyphicon glyphicon-house"></span></strong></li> <hr>
+                {% if flat.negotiable %}
+                <li><strong>Negotiable<span class="glyphicon glyphicon-ok"></span></strong></strong></li>
+                {% else %}
+                <li><strong>Negotiable<span class="glyphicon glyphicon-remove"></span></strong></strong></li>
+                {% endif %}
+            </ul>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+</div>
+    <br>
+{% endfor %}
+{% else %}
+<h1>   Opps,No Flats found</h1>
+{%endif%}
+<!--<div class="container" >
+    <div class="row" style="background-color: lightblue">
+        <h3><strong>NAME</strong></h3>
+        <a>NEAREST STATION</a>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <p><strong>SQUARE FEET</strong></p>
+        </div>
+        <div class="col-md-4">
+            <p><strong>BHK</strong></p>
+        </div>
+        <div class="col-md-4">
+            <p><strong>PRICE</strong></p>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-md-4">
+            <img src="imgPG/flatmum.jpg">
+        </div>
+    </div>
+        <hr color=" black">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-4">
+                <p><strong>CONDITION</strong></p>
+            </div>
+                <div class="col-md-4">
+                    <p><strong>AGE</strong></p>
+                </div>
+            </div>
+        </div>
+        <hr color="black">
+    </div>
+
+</div>
+-->
+</div>
+</body>
+</html>
+
+{% endblock %}

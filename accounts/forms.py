@@ -18,9 +18,8 @@ class UserLoginForm(forms.Form):
         username = self.cleaned_data.get("username")
         password = self.cleaned_data.get('password')
 
-
         if username and password:
-            user = authenticate(username=username,password=password)
+            user = authenticate(username=username, password=password)
             if not user:
                 raise forms.ValidationError("This User Does Not Exist")
             if not user.check_password(password):
@@ -35,8 +34,6 @@ class UserRegisterForm(forms.ModelForm):
     email = forms.EmailField(label='Email')
     email2 = forms.EmailField(label='Confirm Email')
     password = forms.CharField(widget=forms.PasswordInput)
-
-
 
     class Meta:
         model = User
