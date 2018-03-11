@@ -46,3 +46,5 @@ def membership(request):
     return render(request, 'homepage/memberPG.html')
 
 
+def services(request):
+    return render(request, 'homepage/services.html')

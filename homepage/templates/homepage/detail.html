@@ -1,4 +1,62 @@
-<h1>{{ flat.nearest_railway_station }}</h1>
-<form method="post" action="{% url 'homepage:flat-delete' flat.id %}">{% csrf_token %}
-    <button type="submit" name="q">delete</button>
-</form>
+{% extends 'homepage/navbarPG.html' %}
+{% block body %}
+<style>
+    #panel{
+        max-width: 600px;
+        box-shadow: 10px 10px 10px black;
+    }
+
+    #grad1 {
+        height: 100%;
+
+    }
+
+
+
+
+</style>
+<div id="grad1">
+    <div class="container text-center">
+        <br>
+        <br>
+        <div class="row">
+            <div class="col">
+                {%load staticfiles%}
+                <img src="{%static 'homepage/imgPG/goa.jpg'%}" class="img-rounded"  width="304" height="236">
+                <h3>TITLE</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <br>
+        <br>
+
+        <div class="col-md-6 col-md-offset-3">
+        <div  id="panel">
+            <div class="panel panel-primary">
+                <div class="panel-heading">jhdsahfjhdfhs</div>
+                <div class="panel-body">
+                    <ol>
+                        <li>scnnviov</li>
+                        <li>scnnviov</li>
+                        <li>scnnviov</li>
+                        <li>scnnviov</li>
+                        <li>scnnviov</li>
+                        <li>scnnviov</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+
+{% endblock %}
