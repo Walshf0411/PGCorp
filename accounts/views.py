@@ -22,7 +22,7 @@ def login_view(request):
         user = authenticate(username=username, password=password)
         login(request,user)
         print(request.user.is_authenticated())
-        return redirect("/")
+        return redirect("/flats/")
 
     return render(request, "form.html", {"form": form, "title": title})
 

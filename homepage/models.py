@@ -18,9 +18,10 @@ class Flat(models.Model):
     description = models.TextField()
     preferred_guests = models.CharField(max_length=10, choices=PREFERRED_GUESTS, default='Student')
     house_type = models.CharField(max_length=10, choices=HOUSE_TYPE, default='1 BHK')
+    contact = models.CharField(max_length=10, default='91+')
 
     def get_absolute_url(self):
-        return reverse('homepage:detail', kwargs={'': self.pk})
+        return reverse('homepage:detail', kwargs={'pk': self.pk})
 
     def __str__(self):
         return 'Nearest Rail : '+str(self.nearest_railway_station)+" id : "+str(self.pk)

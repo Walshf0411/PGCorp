@@ -5,11 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--Loading static files-->
 	{% load staticfiles %}
-	<link rel="stylesheet" href="{% static 'homepage/PG.css'%}">
+	<link rel="stylesheet" href="static/homepage/PG.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <style>
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            background-color: black;
+            color: #FFF;
+            padding: 1% 0;
+            font-family: Arial;
+            font-size: 1em;
+            border:0;
+
+        }
+
+        .navbar-brand{
+            float: left;
+            min-height: 55px;
+            padding: 0 10px 5px;
+        }
+
+        .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus,
+        .navbar-inverse .navbar-nav .active a:hover {
+            color: #FFF;
+            background-color: black;
+        }
+
+        .navbar-inverse .navbar-nav li a{
+            color: lightblue;
+        }
+    </style>
 </head>
 <body>
 
@@ -30,9 +59,9 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="{% url 'homepage:index' %}"><span class="glyphicon glyphicon-home"> Home</a></li>
                 <li><a href="#foot"><span class="glyphicon glyphicon-earphone"> Contact</span></a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-file"> Services</span></a></li>
+                <li><a href="{% url 'homepage:services'%}"><span class="glyphicon glyphicon-file"> Services</span></a></li>
                 <li><a href="{% url 'homepage:flats' %}"><span class="glyphicon glyphicon-bed"> Flats</span></a></li>
-                <li><a href=""><span class="glyphicon glyphicon-calendar"> Membership</span></a></li>
+                <li><a href="{% url 'homepage:membership'%}"><span class="glyphicon glyphicon-calendar"> Membership</span></a></li>
             </ul>
 
             <!--Navigation bar menu items that appear to the left-->
@@ -42,12 +71,12 @@
                 </div>
                 <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"> Search</span></button>
             </form>
-            <form class="navbar-form navbar-right" action="loginPg.html">
+            <form class="navbar-form navbar-right" action="{% url 'login'%}">
                 <div class="form-group">
                     <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-user"> Login</span></button>
                 </div>
             </form>
-            <form class="navbar-form navbar-right" action="#">
+            <form class="navbar-form navbar-right" action="{% url 'logout'%}">
                 <div class="form-group">
                     <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-log-out"> Sign out</span></button>
                 </div>
