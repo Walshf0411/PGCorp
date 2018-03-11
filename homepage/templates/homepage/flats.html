@@ -27,7 +27,7 @@
         <div class="col-md-6">
           <h2>Owner : {{flat.user}}</h2>
             <ul>
-                <hr> <li><strong>Contact : <span class="glyphicon glyphicon-phone"></span></strong></li> <hr>
+                <hr> <li><strong>Contact : {{flat.contact}}<span class="glyphicon glyphicon-phone"></span></strong></li> <hr>
                 <li><strong>Nearest station : {{flat.nearest_railway_station}}<span class="glyphicon glyphicon-train"></span></strong></li> <hr>
                <li><strong>House type : {{flat.house_type}}<span class="glyphicon glyphicon-house"></span></strong></li> <hr>
                 {% if flat.negotiable %}
@@ -35,7 +35,8 @@
                 {% else %}
                 <li><strong>Negotiable<span class="glyphicon glyphicon-remove"></span></strong></strong></li><hr>
                 {% endif %}
-                <li><button class="btn btn-primary">VIEW DETAILS</button></li>
+                <li><button class="btn btn-primary"><a href="{% url 'homepage:detail' flat.id %}" 
+                    style="text-decoration: none;color:black"> VIEW DETAILS</a></button></li>
             </ul>
         </div>
 

@@ -72,11 +72,11 @@
     <!--Carousel Starts here-->
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            {% load staticfiles %}<img src="{% static 'homepage/imgPG/home_1PG.png'%}" class="img-responsive">
+            {% load staticfiles %}<img src="{% static 'homepage/imgPG/home2PG.jpg' %}" class="img-responsive">
             <div class="carousel-caption" id="capH">
                 <h1><strong>GET TO KNOW PG CORP</strong></h1>
                 <br>
-                <a href="indexPG.html" class="button btn-success" id="bt1">GET STARTED</a>
+                <a href="{% url 'register' %}" class="button btn-success" id="bt1">GET STARTED</a>
             </div>
         </div> <!--end active-->
         <div class="item">
@@ -87,7 +87,7 @@
 
         </div>
         <div class="item">
-            {% load staticfiles %}<img src="{% static 'homepage/imgPG/home2PG.jpg' %}">
+            {% load staticfiles %}<img src="{% static 'homepage/imgPG/home_1PG.png'%}">
         </div>
     </div>
     <!--start slider controls-->

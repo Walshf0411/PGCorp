@@ -48,3 +48,8 @@ def membership(request):
 
 def services(request):
     return render(request, 'homepage/services.html')
+
+
+def maps(request, pk):
+    query = Flat.objects.filter(id=pk)
+    return render(request, 'homepage/maps1.html', context={'flat': query})

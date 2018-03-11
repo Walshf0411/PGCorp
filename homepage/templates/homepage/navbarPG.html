@@ -61,7 +61,7 @@
                 <li><a href="#foot"><span class="glyphicon glyphicon-earphone"> Contact</span></a></li>
                 <li><a href="{% url 'homepage:services'%}"><span class="glyphicon glyphicon-file"> Services</span></a></li>
                 <li><a href="{% url 'homepage:flats' %}"><span class="glyphicon glyphicon-bed"> Flats</span></a></li>
-                <li><a href=""><span class="glyphicon glyphicon-calendar"> Membership</span></a></li>
+                <li><a href="{% url 'homepage:membership'%}"><span class="glyphicon glyphicon-calendar"> Membership</span></a></li>
             </ul>
 
             <!--Navigation bar menu items that appear to the left-->
@@ -71,12 +71,12 @@
                 </div>
                 <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"> Search</span></button>
             </form>
-            <form class="navbar-form navbar-right" action="loginPg.html">
+            <form class="navbar-form navbar-right" action="{% url 'login'%}">
                 <div class="form-group">
                     <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-user"> Login</span></button>
                 </div>
             </form>
-            <form class="navbar-form navbar-right" action="#">
+            <form class="navbar-form navbar-right" action="{% url 'logout'%}">
                 <div class="form-group">
                     <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-log-out"> Sign out</span></button>
                 </div>

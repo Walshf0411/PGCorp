@@ -10,10 +10,6 @@
         height: 100%;
 
     }
-
-
-
-
 </style>
 <div id="grad1">
     <div class="container text-center">
@@ -22,8 +18,8 @@
         <div class="row">
             <div class="col">
                 {%load staticfiles%}
-                <img src="{%static 'homepage/imgPG/goa.jpg'%}" class="img-rounded"  width="304" height="236">
-                <h3>TITLE</h3>
+                <img src="{{flat.image.url}}" class="img-rounded"  width="304" height="236">
+                <h3>{{flat.user}}'s Flat Details</h3>
             </div>
         </div>
     </div>
@@ -35,15 +31,22 @@
         <div class="col-md-6 col-md-offset-3">
         <div  id="panel">
             <div class="panel panel-primary">
-                <div class="panel-heading">jhdsahfjhdfhs</div>
+                <div class="panel-heading">Flat Details</div>
                 <div class="panel-body">
                     <ol>
-                        <li>scnnviov</li>
-                        <li>scnnviov</li>
-                        <li>scnnviov</li>
-                        <li>scnnviov</li>
-                        <li>scnnviov</li>
-                        <li>scnnviov</li>
+                        <li>Username : {{flat.user}}</li>
+                        <li>price : {{flat.price}}</li>
+                        <li>nearest_railway_station : {{flat.nearest_railway_station}}</li>
+                        <li>number_of_members : {{flat.number_of_members}}</li>
+                        {% if flat.price_negotiable %}
+                        <li>Neogtiable <span class="glyphicon glyphicon-ok"></span></li>
+                        {%else%}
+                        <li>Neogtiable <span class="glyphicon glyphicon-remove"></span></li>
+                        {%endif%}
+                        <li>description : <p>{{flat.description }}</p></li>
+                        <li>house_type : {{flat.house_type }}</li>
+                        <li>contact : {{flat.contact}}</li>
+                        <li><a href="{% url 'homepage:maps' flat.id %}">View Location in maps</a></li>
                     </ol>
                 </div>
             </div>
