@@ -1,7 +1,7 @@
-$project
+PGCORP
 ========
 
-$project will solve your problem of where to look for Paying Guests around,
+PGCorp will solve your problem of where to look for Paying Guests around,
 by providing a basic explanation of how to do it easily.
 
 Look how easy it is to use:
@@ -18,7 +18,7 @@ Features
 Installation
 ------------
 
-Install $project by running:
+Install PGCorp by running:
 
 1.Download and clone the file<br>
 2.Extract the file <br>
