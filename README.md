@@ -1,7 +1,7 @@
-$project
+PGCORP
 ========
 
-$project will solve your problem of where to look for Paying Guests around,
+PGCorp will solve your problem of where to look for Paying Guests around,
 by providing a basic explanation of how to do it easily.
 
 Look how easy it is to use:
@@ -18,27 +18,26 @@ Features
 Installation
 ------------
 
-Install $project by running:
+Install PGCorp by running:
 
-1.Download and clone the file 
-2.Extract the file 
-3.Install Python v3.6 
-4.Go to command prompt 
-5.Use command:- pip install django==1.9.1 
-6.Django_admin --version to verify installation 
-7.Change the directory to where you have extracted your file 
-8.Use command:- python manage.py runserver 
-9.Copy the local address to the browser 
-10.The homepage will be visible 
+1.Download and clone the file<br>
+2.Extract the file <br>
+3.Install Python v3.6 <br>
+4.Go to command prompt <br>
+5.Use command:- pip install django==1.9.1<br> 
+6.Django_admin --version to verify installation <br>
+7.Change the directory to where you have extracted your file<br> 
+8.Use command:- python manage.py runserver <br>
+9.Copy the local address to the browser <br>
+10.The homepage will be visible <br>
 
 Contribute
 ----------
 
-- Issue Tracker: github.com/$project/$project/issues
-- Source Code: github.com/$project/$project
+- Source Code: github.com/Walshf0411/PGCorp
 
 Support
 -------
 
 If you are having issues, please let us know.
-We have a mailing list located at: project@google-groups.com
+We have a mailing list located at: someone@something.com
