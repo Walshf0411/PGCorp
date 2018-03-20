@@ -5,10 +5,12 @@ PGCorp will solve your problem of where to look for Paying Guests around,
 by providing a basic explanation of how to do it easily.
 
 Look how easy it is to use:
-	1.Search your location to get a list of all flats in the locality.
-	2.Click on View Details to check out details about the flat and its owner
-	3.Click on buy now to view the paying process
-
+	1.Search your location to get a list of all flats in the locality.<br>
+	![Search bar](https//:www.github.com/Walshf0411/PGCorp/Readme/search.PNG)<br>
+	2.Click on View Details to check out details about the flat and its owner<br>
+	![flat list](https//:www.github.com/Walshf0411/PGCorp/Readme/details.PNG)<br>
+	3.Click on buy now to view the paying process<br>
+	![Details of a flat](https//:www.github.com/Walshf0411/PGCorp/Readme/Detailed.PNG)<br>
 Features
 --------
 
